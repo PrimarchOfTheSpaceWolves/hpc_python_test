@@ -30,11 +30,6 @@ def main():
     
     print("Models loaded.")
     
-    # Speed up with torch.compile
-    #base.unet = torch.compile(base.unet, mode="reduce-overhead", fullgraph=True)
-    #refiner.unet = torch.compile(refiner.unet, mode="reduce-overhead", fullgraph=True)
-    print("Models compiled.")
-    
     # Create output directory
     out_dir = "out_images"
     if not os.path.exists(out_dir):
@@ -70,7 +65,7 @@ def main():
         ).images[0]
         
         # Save image
-        image.save(os.path.join(out_dir), "%02d.jpg" % i)
+        image.save(os.path.join(out_dir, "%02d.png" % i))
         
     end_time = time.time()
     print("Done!") 
