@@ -11,15 +11,15 @@ python -c "import torch;x=torch.rand(5, 3);print(x);print(torch.cuda.is_availabl
 
 # Installing other packages
 pip3 install pandas scikit-learn scikit-image matplotlib pylint gradio jupyter opencv-python
-
-
+pip3 install diffusers["torch"] transformers 
+pip3 install peft
 
 # UP TO HERE
 
 # Using 3.10 in the original example
 pip3 install torch==2.3.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-pip3 install accelerate 
-pip3 install diffusers["torch"] transformers 
+
+
 pip3 install --upgrade huggingface_hub
 pip3 install huggingface_hub[cli,torch]
 pip3 install peft
