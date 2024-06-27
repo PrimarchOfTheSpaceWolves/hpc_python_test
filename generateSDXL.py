@@ -64,6 +64,8 @@ def main():
             image=image,
         ).images[0]
         
+        print(image)
+        
         # Save image
         image.save(os.path.join(out_dir, "%02d.png" % i))
         
