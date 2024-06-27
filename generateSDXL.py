@@ -31,8 +31,8 @@ def main():
     print("Models loaded.")
     
     # Speed up with torch.compile
-    base.unet = torch.compile(base.unet, mode="reduce-overhead", fullgraph=True)
-    refiner.unet = torch.compile(refiner.unet, mode="reduce-overhead", fullgraph=True)
+    #base.unet = torch.compile(base.unet, mode="reduce-overhead", fullgraph=True)
+    #refiner.unet = torch.compile(refiner.unet, mode="reduce-overhead", fullgraph=True)
     print("Models compiled.")
     
     # Create output directory
